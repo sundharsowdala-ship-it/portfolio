@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prasad | Generative AI Engineer</title>
+<meta name="description" content="Portfolio of Sowdala Venkata Hema Sundhar Prasad — Generative AI Developer building RAG, Agentic AI, document intelligence and Azure AI systems.">
+<style>
+:root{
+ --bg:#050912;--panel:#0a1220;--panel2:#0e1929;--text:#f4f8ff;--muted:#9aaac0;
+ --line:#1d2c43;--cyan:#62ddff;--violet:#a78bfa;--green:#66e3a4;
+}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:radial-gradient(800px 500px at 80% -10%,#17264b 0,transparent 65%),var(--bg);color:var(--text);font:16px/1.65 Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,sans-serif}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;background-image:linear-gradient(rgba(255,255,255,.018) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.018) 1px,transparent 1px);background-size:48px 48px;mask-image:linear-gradient(to bottom,#000,transparent 80%)}
+a{color:inherit;text-decoration:none}.container{width:min(1160px,92%);margin:auto}
+nav{position:sticky;top:0;z-index:50;background:rgba(5,9,18,.76);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
+.nav{height:68px;display:flex;justify-content:space-between;align-items:center}.brand{font-weight:900;letter-spacing:.5px}.brand i{color:var(--cyan);font-style:normal}
+.links{display:flex;gap:23px;color:var(--muted);font-size:14px}.links a:hover{color:var(--text)}
+.hero{min-height:760px;display:grid;grid-template-columns:1.05fr .95fr;gap:55px;align-items:center;padding:90px 0}
+.kicker{display:inline-flex;gap:8px;align-items:center;border:1px solid #23405d;background:#0a1727;border-radius:999px;padding:7px 11px;color:#bdeaff;font-size:12px;font-weight:800;letter-spacing:.7px}
+.kicker:before{content:"";width:7px;height:7px;background:var(--green);border-radius:50%;box-shadow:0 0 13px var(--green)}
+h1{font-size:clamp(48px,7vw,82px);line-height:.98;letter-spacing:-4px;margin:20px 0}
+.gradient{background:linear-gradient(100deg,var(--cyan),var(--violet));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{max-width:690px;color:var(--muted);font-size:19px}.buttons{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
+.btn{border:1px solid var(--line);border-radius:12px;padding:12px 17px;font-weight:800;transition:.2s}.btn:hover{transform:translateY(-2px);border-color:#3b5878}.btn.primary{background:var(--text);color:#07101c}
+.system{position:relative;min-height:410px;border:1px solid var(--line);border-radius:28px;background:linear-gradient(145deg,#0b1728,#080e19);overflow:hidden;box-shadow:0 30px 100px rgba(0,0,0,.35)}
+.system .glow{position:absolute;width:220px;height:220px;border-radius:50%;background:#5c7cff22;filter:blur(35px);top:80px;left:110px}
+.node{position:absolute;padding:12px 15px;border:1px solid #294765;background:#0c1a2b;border-radius:12px;font-weight:800;font-size:13px;box-shadow:0 10px 30px #0005;animation:float 4s ease-in-out infinite}
+.node small{display:block;color:var(--muted);font-weight:500;margin-top:2px}.n1{left:7%;top:12%}.n2{right:7%;top:12%;animation-delay:.7s}.n3{left:10%;bottom:15%;animation-delay:1.3s}.n4{right:9%;bottom:15%;animation-delay:2s}
+.core{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:150px;height:150px;border-radius:50%;display:grid;place-items:center;text-align:center;background:linear-gradient(135deg,#102d43,#1a1838);border:1px solid #52708d;box-shadow:0 0 60px #62ddff18;font-weight:900;color:#dff8ff}
+.line{position:absolute;height:1px;background:linear-gradient(90deg,transparent,#385774,transparent);transform-origin:left center}.l1{width:190px;left:25%;top:29%;transform:rotate(18deg)}.l2{width:190px;left:55%;top:29%;transform:rotate(162deg)}.l3{width:190px;left:27%;top:68%;transform:rotate(-17deg)}.l4{width:190px;left:56%;top:68%;transform:rotate(197deg)}
+@keyframes float{50%{transform:translateY(-7px)}}
+section{padding:100px 0}.eyebrow{color:var(--cyan);text-transform:uppercase;letter-spacing:2px;font-size:12px;font-weight:900}
+h2{font-size:40px;line-height:1.1;margin:8px 0 12px;letter-spacing:-1.5px}.sub{color:var(--muted);max-width:750px;margin-bottom:35px}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}.card{border:1px solid var(--line);background:linear-gradient(145deg,var(--panel),var(--panel2));border-radius:20px;padding:26px;transition:.25s}.card:hover{transform:translateY(-5px);border-color:#315172}
+.card h3{margin:0 0 8px;font-size:21px}.card p{color:var(--muted);margin:7px 0}.tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:17px}.tag{font-size:11px;border:1px solid #263e59;border-radius:999px;padding:4px 8px;color:#ccefff;background:#091522}
+.case{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:25px}.case .card{min-height:250px}.metric{font-size:34px;font-weight:900;color:var(--cyan);line-height:1}.metric-label{color:var(--muted);font-size:13px;margin-top:5px}
+.arch{margin-top:25px;padding:25px;border:1px solid var(--line);border-radius:22px;background:#07101c;overflow:auto}
+.archrow{display:flex;align-items:center;justify-content:center;gap:8px;min-width:760px}.abox{min-width:125px;text-align:center;padding:13px 10px;border:1px solid #294765;background:#0c1928;border-radius:12px;font-size:12px;font-weight:800}.abox span{display:block;color:var(--muted);font-weight:500}.arrow{color:var(--cyan);font-size:20px}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin:25px 0}.tab{cursor:pointer;border:1px solid var(--line);background:#091321;color:var(--muted);padding:9px 13px;border-radius:10px;font-weight:800}.tab.active{color:var(--text);border-color:#3a6388;background:#102237}.tabcontent{display:none}.tabcontent.active{display:block}
+.timeline{position:relative;margin-top:35px}.timeline:before{content:"";position:absolute;left:8px;top:5px;bottom:5px;width:1px;background:var(--line)}.role{position:relative;padding-left:35px;margin-bottom:42px}.role:before{content:"";position:absolute;left:3px;top:10px;width:11px;height:11px;border-radius:50%;background:var(--cyan);box-shadow:0 0 15px #62ddff66}.date{color:var(--cyan);font-size:12px;font-weight:900}.role h3{margin:3px 0}.company{color:var(--muted)}.role ul{color:var(--muted);padding-left:20px}
+.skills{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.skill{padding:18px;border:1px solid var(--line);border-radius:15px;background:var(--panel)}.skill strong{display:block;margin-bottom:5px}.skill span{color:var(--muted);font-size:13px}
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:18px}.contact a{color:var(--cyan)}footer{border-top:1px solid var(--line);padding:30px 0;color:var(--muted);font-size:13px}
+.reveal{opacity:0;transform:translateY(18px);transition:.7s}.reveal.show{opacity:1;transform:none}
+@media(max-width:850px){.links{display:none}.hero{grid-template-columns:1fr;padding:70px 0}.system{min-height:360px}.grid,.case,.contact{grid-template-columns:1fr}.skills{grid-template-columns:1fr 1fr}section{padding:70px 0}}
+@media(max-width:520px){.skills{grid-template-columns:1fr}h1{letter-spacing:-2.5px}.system{min-height:320px}.node{font-size:11px}.core{width:120px;height:120px}}
+</style>
+</head>
+<body>
+<nav><div class="container nav"><a class="brand" href="#top">PRASAD<span><i>.</i>AI</span></a><div class="links"><a href="#work">Work</a><a href="#cases">Case Studies</a><a href="#experience">Experience</a><a href="#stack">Stack</a><a href="#contact">Contact</a></div></div></nav>
+
+<main id="top">
+<section class="hero">
+<div>
+<div class="kicker">AVAILABLE FOR AI / GENAI OPPORTUNITIES</div>
+<h1>Engineering <span class="gradient">intelligent systems</span> for real enterprise data.</h1>
+<p>Generative AI Developer focused on RAG, Agentic AI, document intelligence and Azure AI. I turn messy documents and business data into reliable retrieval, analytics and automation workflows.</p>
+<div class="buttons"><a class="btn primary" href="#cases">See case studies</a><a class="btn" href="resume.pdf" target="_blank" rel="noopener">View resume ↗</a></div>
+</div>
+<div class="system" aria-label="Enterprise AI architecture visualization">
+<div class="glow"></div><div class="line l1"></div><div class="line l2"></div><div class="line l3"></div><div class="line l4"></div>
+<div class="node n1">Documents<small>PDF · PPT · Excel</small></div>
+<div class="node n2">Azure AI<small>OpenAI · Search</small></div>
+<div class="node n3">Retrieval<small>Chunking · Vectors</small></div>
+<div class="node n4">Agents<small>Workflows · Actions</small></div>
+<div class="core">ENTERPRISE<br>GENAI<br>ENGINE</div>
+</div>
+</section>
+
+<section id="work" class="reveal"><div class="container">
+<div class="eyebrow">Selected Work</div><h2>Projects that solve actual AI problems.</h2><p class="sub">My portfolio is centered on document-heavy enterprise workflows, contextual retrieval, analytics and intelligent automation.</p>
+<div class="grid">
+<article class="card"><h3>LLM-Powered ESG Data Extraction</h3><p>Extracts predefined ESG measures from large corporate reports using Docling parsing, hybrid chunking, contextual ingestion and LLM-based structured extraction.</p><div class="tags"><span class="tag">LLM</span><span class="tag">Docling</span><span class="tag">Hybrid Chunking</span><span class="tag">Azure</span><span class="tag">Python</span></div></article>
+<article class="card"><h3>AI-Powered Climate Analytics</h3><p>Extracts GHG emissions and net-zero targets from sustainability documents, designed for high-volume processing through parallel and asynchronous execution.</p><div class="tags"><span class="tag">Azure OpenAI</span><span class="tag">Async</span><span class="tag">Parallel Processing</span><span class="tag">PyMuPDF</span></div></article>
+<article class="card"><h3>Analytical Insights Assistant</h3><p>Natural-language analytics assistant combining structured organizational metrics with unstructured sources to improve contextual business answers.</p><div class="tags"><span class="tag">RAG</span><span class="tag">NLP</span><span class="tag">Azure AI Search</span><span class="tag">Python</span></div></article>
+<article class="card"><h3>Meeting Intelligence & Action Tracking</h3><p>Agentic AI proof of concept that converts meeting transcripts into decisions, action items and structured follow-up information.</p><div class="tags"><span class="tag">Agentic AI</span><span class="tag">Multi-Agent</span><span class="tag">NLP</span><span class="tag">Azure OpenAI</span></div></article>
+</div></div></section>
+
+<section id="cases" class="reveal"><div class="container">
+<div class="eyebrow">Case Studies</div><h2>How I approach an enterprise AI problem.</h2>
+<p class="sub">These case studies turn the resume bullets into an engineering story: problem → architecture → implementation → outcome.</p>
+<div class="tabs">
+<button class="tab active" onclick="showCase('esg',this)">ESG Extraction</button>
+<button class="tab" onclick="showCase('climate',this)">Climate Analytics</button>
+<button class="tab" onclick="showCase('assistant',this)">Insights Assistant</button>
+<button class="tab" onclick="showCase('meeting',this)">Meeting Agents</button>
+</div>
+<div id="esg" class="tabcontent active">
+<div class="case"><div class="card"><h3>The challenge</h3><p>Large annual, environmental and sustainability reports contain relevant ESG measures buried across hundreds of pages, with varying document structures.</p><div class="metric">LLM + RAG</div><div class="metric-label">Core approach</div></div><div class="card"><h3>The engineering</h3><p>PDF parsing → hybrid chunking → contextual ingestion → targeted retrieval → declarative LLM extraction → structured ESG output.</p><div class="tags"><span class="tag">Document AI</span><span class="tag">Retrieval</span><span class="tag">Structured Output</span></div></div></div>
+<div class="arch"><div class="archrow"><div class="abox">Corporate Reports<span>PDF / documents</span></div><div class="arrow">→</div><div class="abox">Docling<span>Parsing</span></div><div class="arrow">→</div><div class="abox">Hybrid Chunks<span>Context</span></div><div class="arrow">→</div><div class="abox">LLM<span>Extraction</span></div><div class="arrow">→</div><div class="abox">ESG Dataset<span>Measures</span></div></div></div>
+</div>
+<div id="climate" class="tabcontent">
+<div class="case"><div class="card"><h3>The challenge</h3><p>High-volume sustainability documents needed reliable extraction of climate metrics such as GHG emissions and net-zero targets without processing every document serially.</p><div class="metric">Async + Parallel</div><div class="metric-label">Scalability strategy</div></div><div class="card"><h3>The engineering</h3><p>Document conversion and parsing were combined with asynchronous API calls and parallel execution to improve throughput for large workloads.</p><div class="tags"><span class="tag">Azure Functions</span><span class="tag">Blob Storage</span><span class="tag">Docling</span><span class="tag">PyMuPDF</span></div></div></div>
+</div>
+<div id="assistant" class="tabcontent">
+<div class="case"><div class="card"><h3>The challenge</h3><p>Business users needed natural-language access to organizational metrics spanning structured enterprise data and unstructured information.</p><div class="metric">Natural Language</div><div class="metric-label">User experience</div></div><div class="card"><h3>The engineering</h3><p>Integrated data sources with contextual retrieval and Azure AI Search so questions could be grounded in relevant enterprise information before answer generation.</p><div class="tags"><span class="tag">Azure AI Search</span><span class="tag">NLP</span><span class="tag">RAG</span></div></div></div>
+</div>
+<div id="meeting" class="tabcontent">
+<div class="case"><div class="card"><h3>The challenge</h3><p>Meeting outcomes are often lost in long transcripts, making decisions and follow-up actions difficult to track manually.</p><div class="metric">Agentic AI</div><div class="metric-label">Automation pattern</div></div><div class="card"><h3>The engineering</h3><p>Agent workflows handle context understanding, decision extraction, action-item identification and structured output generation.</p><div class="tags"><span class="tag">Multi-Agent</span><span class="tag">NLP</span><span class="tag">Azure OpenAI</span></div></div></div>
+</div>
+</div></section>
+
+<section id="experience" class="reveal"><div class="container">
+<div class="eyebrow">Experience</div><h2>From reporting systems to GenAI engineering.</h2>
+<div class="timeline">
+<div class="role"><div class="date">02/2025 — PRESENT</div><h3>GenAI Developer · Infosys</h3><div class="company">Hyderabad, India</div><ul><li>Designed RAG-based solutions and intelligent Q&A systems for enterprise retrieval.</li><li>Built extraction pipelines for PDFs, PPTs and Excel files.</li><li>Developed ESG and climate analytics solutions using LLMs and Azure services.</li><li>Used parallel processing and asynchronous API execution for high-volume workloads.</li><li>Collaborated with stakeholders to translate business requirements into practical AI solutions.</li></ul></div>
+<div class="role"><div class="date">02/2024 — 02/2025</div><h3>SAP BO Developer · Tata Consultancy Services</h3><div class="company">Pune, India</div><ul><li>Developed and maintained SAP BusinessObjects enterprise reports.</li><li>Designed reusable Universe data models and optimized queries.</li><li>Validated report outputs and collaborated with business stakeholders.</li></ul></div>
+</div></div></section>
+
+<section id="stack" class="reveal"><div class="container">
+<div class="eyebrow">Engineering Stack</div><h2>Tools I work with.</h2><p class="sub">A practical stack for building production-oriented AI applications.</p>
+<div class="skills">
+<div class="skill"><strong>GenAI & LLM</strong><span>LLMs · RAG · Prompt Engineering · Agentic AI · Multi-Agent Orchestration</span></div>
+<div class="skill"><strong>Azure AI</strong><span>Azure OpenAI · Azure AI Search · AI Foundry · Functions · Blob Storage · App Services</span></div>
+<div class="skill"><strong>Frameworks</strong><span>LangChain · LangGraph · Unstructured.io · Django</span></div>
+<div class="skill"><strong>Data</strong><span>Python · SQL · PySpark · MongoDB · Vector Search · Embeddings</span></div>
+<div class="skill"><strong>Document Intelligence</strong><span>Docling · PyMuPDF · PDF Processing · Hybrid Chunking · Ingestion</span></div>
+<div class="skill"><strong>NLP Foundations</strong><span>Text Preprocessing · Word Embeddings · Classification · Summarization</span></div>
+</div></div></section>
+
+<section id="contact" class="reveal"><div class="container">
+<div class="eyebrow">Contact</div><h2>Let's build something useful.</h2><p class="sub">Open to conversations around GenAI engineering, enterprise AI, RAG, document intelligence and intelligent automation.</p>
+<div class="contact"><div class="card"><strong>Resume</strong><p><a href="resume.pdf" target="_blank" rel="noopener">View resume ↗</a> · <a href="resume.pdf" download>Download PDF</a></p></div><div class="card"><strong>Email</strong><p><a href="mailto:svhsprasad1125007@gmail.com">svhsprasad1125007@gmail.com</a></p></div><div class="card"><strong>Phone</strong><p><a href="tel:+918688714993">+91 8688714993</a></p></div></div>
+</div></section>
+</main>
+<footer><div class="container">© 2026 Sowdala Venkata Hema Sundhar Prasad · Generative AI Developer</div></footer>
+<script>
+function showCase(id,btn){
+ document.querySelectorAll('.tabcontent').forEach(x=>x.classList.remove('active'));
+ document.querySelectorAll('.tab').forEach(x=>x.classList.remove('active'));
+ document.getElementById(id).classList.add('active');btn.classList.add('active');
+}
+const io=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show')}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(e=>io.observe(e));
+</script>
+</body>
+</html>
